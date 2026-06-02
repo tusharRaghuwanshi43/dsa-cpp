@@ -1,3 +1,5 @@
+// Level - Medium
+
 class Solution
 {
 public:
