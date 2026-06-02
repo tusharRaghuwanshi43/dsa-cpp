@@ -1,7 +1,15 @@
 /*
 Problem Link - https://www.naukri.com/code360/problems/aggressive-cows_1082559
 Problem name - Aggressive Cows
+Problem Statement - Given an array of integers representing the positions of stalls and an integer k which represents the number of cows. The task is to assign stalls to cows such that the minimum distance between any two cows is as large as possible. Return the largest minimum distance.
+Example 1:
+Input: stalls = [1, 2, 4, 8, 9], k = 3
+Output: 3
+Explanation: The cows can be placed at positions 1, 4 and 8. The minimum distance between any two cows is 3.
 */
+
+#include <bits/stdc++.h>
+using namespace std;
 
 bool possible(vector<int> &stalls, int k, int mid)
 {
@@ -48,4 +56,13 @@ int aggressiveCows(vector<int> &stalls, int k)
         mid = s + (e - s) / 2;
     }
     return ans;
+}
+
+int main()
+{
+    vector<int> stalls = {1, 2, 4, 8, 9};
+    int k = 3;
+    cout << "The largest minimum distance is: ";
+    cout << aggressiveCows(stalls, k) << endl;
+    return 0;
 }

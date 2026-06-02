@@ -1,4 +1,17 @@
-// Level - Easy
+/*
+Level - Easy
+Problem Link - https://leetcode.com/problems/sqrtx/
+Problem Name - 69. Sqrt(x)
+Problem Statement - Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+Example 1:
+Input: x = 4
+Output: 2
+Explanation: The square root of 4 is 2, so we return 2.
+*/
+
+#include <bits/stdc++.h>
+using namespace std;
+
 class Solution
 {
 public:
@@ -28,3 +41,11 @@ public:
         return ans;
     }
 };
+
+int main()
+{
+    int x = 4;
+    Solution sol;
+    cout << sol.mySqrt(x) << endl;
+    return 0;
+}

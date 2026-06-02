@@ -1,7 +1,15 @@
 /*
 Problem Link - https://www.naukri.com/code360/problems/allocate-books_1090540
 Problem name - Allocate Books
+Problem Statement - Given an array of integers arr of size n where arr[i] represents the number of pages in the ith book and an integer m representing the number of students. The task is to allocate all the books to m students such that each student gets at least one book and the maximum number of pages assigned to a student is minimum.
+Example 1:
+Input: arr = [12, 34, 67, 90], m = 2
+Output: 113
+Explanation: The books can be allocated as [12, 34, 67] and [90]. The maximum number of pages assigned to a student is 113.
 */
+
+#include <bits/stdc++.h>
+using namespace std;
 
 bool isPossible(vector<int> arr, int n, int m, int mid)
 {
@@ -65,4 +73,14 @@ int findPages(vector<int> arr, int n, int m)
         mid = s + (e - s) / 2;
     }
     return ans;
+}
+
+int main()
+{
+    vector<int> arr = {12, 34, 67, 90};
+    int m = 2;
+    int n = arr.size();
+    cout << "The minimum number of pages is " << endl;
+    cout << findPages(arr, n, m) << endl;
+    return 0;
 }

@@ -1,7 +1,15 @@
 /*
 Problem Link - https://www.naukri.com/code360/problems/search-in-rotated-sorted-array_1082554
 Problem name - Search In Rotated Sorted Array
+Problem Statement - Given an array of integers nums which is sorted in ascending order and is rotated at some pivot unknown to you beforehand (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]), and an integer target, return the index of target if it is in nums, or -1 if it is not in nums. You must write an algorithm with O(log n) runtime complexity.
+Example 1:
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+Explanation: 0 is found at index 4 in the array.
 */
+
+#include <bits/stdc++.h>
+using namespace std;
 
 int getPivot(vector<int> &arr, int n)
 {
@@ -59,4 +67,15 @@ int search(vector<int> &arr, int n, int k)
         // BS on the first line
         return binary(arr, 0, pivot - 1, k);
     }
+}
+
+int main()
+{
+    vector<int> arr = {4, 5, 6, 7, 0, 1, 2};
+    int n = arr.size();
+    int k;
+    cout << "Enter the key to search: ";
+    cin >> k;
+    cout << search(arr, n, k) << endl;
+    return 0;
 }
